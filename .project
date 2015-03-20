@@ -26,7 +26,7 @@
 		<link>
 			<name>.link_to_grails_plugins</name>
 			<type>2</type>
-			<location>/home/ale/tools/grailsProjectFromConsole/publisher/target/work/plugins</location>
+			<location>/home/ale/git/alejandrolp/publisher/target/work/plugins</location>
 		</link>
 	</linkedResources>
 </projectDescription>
