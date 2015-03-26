@@ -102,7 +102,16 @@ log4j.main = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
+	
+     appenders {
+        rollingFile name: "myAppender",
+                    maxFileSize: 9999999999,
+                    file: "/tmp/publisher.log"
+    }
+	
 
+	debug myAppender: ['grails.app.controllers.publisher.ItemsController']
+			   
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
            'org.codehaus.groovy.grails.web.sitemesh',       // layouts
@@ -114,6 +123,7 @@ log4j.main = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+		   
 }
 
 mercadolibre {

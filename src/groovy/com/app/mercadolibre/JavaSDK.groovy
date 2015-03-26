@@ -1,9 +1,12 @@
 package com.app.mercadolibre
 
 import grails.converters.JSON
+
 import com.mercadolibre.sdk.Meli
 import com.ning.http.client.Response
 import com.ning.http.client.FluentStringsMap
+
+import org.codehaus.groovy.grails.web.json.JSONArray;
 import org.codehaus.groovy.grails.web.json.JSONObject
 
 class JavaSDK extends Meli {
@@ -31,7 +34,7 @@ class JavaSDK extends Meli {
 		authorize(code, backurl)
 	}
 
-	public JSONObject get(String url, Boolean addToken) {
+	public Object get(String url, Boolean addToken) {
 		Response r
 		if (addToken) {
 			FluentStringsMap fsm = new FluentStringsMap()
@@ -42,8 +45,17 @@ class JavaSDK extends Meli {
 			r = JavaSDK.getInstance().get(url)
 		}
 		String data = r.getResponseBody()
-		JSONObject jsonObject = JSON.parse(data)
-		return jsonObject
+		
+		Object obj = JSON.parse(data)
+		return obj
+//		try {
+//			JSONObject jsonObject = JSON.parse(data)
+//		}
+//		catch (org.codehaus.groovy.runtime.typehandling.GroovyCastException e) {
+//			JSONArray jsonArray = JSON.parse(data)
+//			println "stop"
+//		}			
+//		return jsonObject
 	}
 	
 	public JSONObject post(String url, String json, Boolean addToken) {
@@ -59,6 +71,14 @@ class JavaSDK extends Meli {
 		String data = r.getResponseBody()
 		JSONObject jsonObject = JSON.parse(data)
 		return jsonObject
+	}
+	
+	def xxx(JSONObject j) {
+		return JSON.parse(data)
+	}
+	
+	def xxx(JSONArray j) {
+		
 	}
 	
 	
