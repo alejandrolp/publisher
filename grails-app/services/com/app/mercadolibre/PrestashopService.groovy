@@ -9,7 +9,7 @@ class PrestashopService {
 	
 	// TODO porque de esta manera no setea el valor del atributo images?
 //	def items = [new Item(idd: 1, name: "[Testing Item] ventilador de techo", description: "Alto ventilador de techo", price: 111.11f, amount: 11, images: ["1", "2"]),
-//	             new Item(idd: 2, name: "[Testing Item] notebook", description: "La mejor notebook del mercado", price: 222.22f, amount: 22, images: ["1", "2"]),
+//	 aaaaa            new Item(idd: 2, name: "[Testing Item] notebook", description: "La mejor notebook del mercado", price: 222.22f, amount: 22, images: ["1", "2"]),
 //	             new Item(idd: 3, name: "[Testing Item] mouse inalambrico", description: "El mejor mouse!!", price: 333.33f, amount: 33, images: ["1", "2"])
 //	]
 	
