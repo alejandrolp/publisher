@@ -15,7 +15,7 @@ class ItemsController {
 	def prestashopService
 
     def index() { 
-		render "hello!" 
+		render "hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" 
 	}
 	
 	def list() {
